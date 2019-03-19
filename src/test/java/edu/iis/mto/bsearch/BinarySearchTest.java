@@ -28,4 +28,8 @@ public class BinarySearchTest {
         assertEquals(1, BinarySearch.search(1, new int [] {1, 2, 3, 4, 5}).getPosition());
     }
 
+    @Test public void case4() {
+        assertEquals(5, BinarySearch.search(5, new int[] {1, 2, 3, 4, 5}).getPosition());
+    }
+
 }
