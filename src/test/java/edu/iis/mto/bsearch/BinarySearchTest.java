@@ -9,22 +9,18 @@ import static org.junit.Assert.*;
 
 /**
  * Utility Class dla wyszukiwania binarnego
- *
  */
 public class BinarySearchTest {
 
-    @Test
-    public void case1(){
-        assertTrue(BinarySearch.search(1, new int [] {1}).isFound());
+    @Test public void case1() {
+        assertTrue(BinarySearch.search(1, new int[] {1}).isFound());
     }
 
-    @Test
-    public void case2(){
-        assertFalse(BinarySearch.search(0, new int [] {1}).isFound());
+    @Test public void case2() {
+        assertFalse(BinarySearch.search(0, new int[] {1}).isFound());
     }
 
-    @Test
-    public void case3(){
+    @Test public void case3() {
         assertEquals(1, BinarySearch.search(1, new int[] {1, 2, 3}).getPosition());
     }
 
@@ -34,6 +30,10 @@ public class BinarySearchTest {
 
     @Test public void case5() {
         assertEquals(2, BinarySearch.search(2, new int[] {1, 2, 3}).getPosition());
+    }
+
+    @Test public void case6() {
+        assertFalse(BinarySearch.search(4, new int[] {1, 2, 3}).isFound());
     }
 
 }
