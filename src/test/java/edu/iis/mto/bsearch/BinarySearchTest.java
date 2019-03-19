@@ -23,4 +23,9 @@ public class BinarySearchTest {
         assertFalse(BinarySearch.search(0, new int [] {1}).isFound());
     }
 
+    @Test
+    public void case3(){
+        assertEquals(1, BinarySearch.search(1, new int [] {1, 2, 3, 4, 5}).getPosition());
+    }
+
 }
