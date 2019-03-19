@@ -25,11 +25,15 @@ public class BinarySearchTest {
 
     @Test
     public void case3(){
-        assertEquals(1, BinarySearch.search(1, new int [] {1, 2, 3, 4, 5}).getPosition());
+        assertEquals(1, BinarySearch.search(1, new int[] {1, 2, 3}).getPosition());
     }
 
     @Test public void case4() {
-        assertEquals(5, BinarySearch.search(5, new int[] {1, 2, 3, 4, 5}).getPosition());
+        assertEquals(3, BinarySearch.search(3, new int[] {1, 2, 3}).getPosition());
+    }
+
+    @Test public void case5() {
+        assertEquals(2, BinarySearch.search(2, new int[] {1, 2, 3}).getPosition());
     }
 
 }
