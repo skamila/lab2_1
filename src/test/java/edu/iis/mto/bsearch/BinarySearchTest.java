@@ -12,27 +12,27 @@ import static org.junit.Assert.*;
  */
 public class BinarySearchTest {
 
-    @Test public void case1() {
+    @Test public void elementInSequenceLength1() {
         assertTrue(BinarySearch.search(1, new int[] {1}).isFound());
     }
 
-    @Test public void case2() {
+    @Test public void elementNotInSequenceLength1() {
         assertFalse(BinarySearch.search(0, new int[] {1}).isFound());
     }
 
-    @Test public void case3() {
+    @Test public void elementFirstInSequence() {
         assertEquals(1, BinarySearch.search(1, new int[] {1, 2, 3}).getPosition());
     }
 
-    @Test public void case4() {
+    @Test public void elementLastInSequence() {
         assertEquals(3, BinarySearch.search(3, new int[] {1, 2, 3}).getPosition());
     }
 
-    @Test public void case5() {
+    @Test public void elementInMiddleOfSequence() {
         assertEquals(2, BinarySearch.search(2, new int[] {1, 2, 3}).getPosition());
     }
 
-    @Test public void case6() {
+    @Test public void elementNotInSequence() {
         assertFalse(BinarySearch.search(4, new int[] {1, 2, 3}).isFound());
     }
 
