@@ -6,6 +6,7 @@ package edu.iis.mto.bsearch;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Utility Class dla wyszukiwania binarnego
@@ -74,6 +75,16 @@ public class BinarySearchTest {
         SearchResult result = BinarySearch.search(element, sequence);
 
         assertFalse(result.isFound());
+
+    }
+
+    @Test public void sequenceLength0() {
+
+        int[] sequence = {};
+        int element = 0;
+
+        assertThrows(IllegalArgumentException.class,
+                () -> BinarySearch.search(element, sequence));
 
     }
 
