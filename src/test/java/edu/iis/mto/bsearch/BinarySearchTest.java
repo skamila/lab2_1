@@ -3,6 +3,7 @@
  */
 package edu.iis.mto.bsearch;
 
+import org.hamcrest.core.Is;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -20,7 +21,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
-        assertTrue(result.isFound());
+        assertThat(result.isFound(), Is.is(true));
     }
 
     @Test public void elementNotInSequenceLength1() {
@@ -30,7 +31,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
-        assertFalse(result.isFound());
+        assertThat(result.isFound(), Is.is(false));
 
     }
 
@@ -41,7 +42,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
-        assertEquals(1, result.getPosition());
+        assertThat(result.getPosition(), Is.is(1));
 
     }
 
@@ -52,7 +53,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
-        assertEquals(3, result.getPosition());
+        assertThat(result.getPosition(), Is.is(3));
 
     }
 
@@ -63,7 +64,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
-        assertEquals(2, result.getPosition());
+        assertThat(result.getPosition(), Is.is(2));
 
     }
 
@@ -74,7 +75,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
-        assertFalse(result.isFound());
+        assertThat(result.isFound(), Is.is(false));
 
     }
 
