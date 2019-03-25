@@ -22,6 +22,8 @@ public class BinarySearchTest {
         SearchResult result = BinarySearch.search(element, sequence);
 
         assertThat(result.isFound(), Is.is(true));
+        assertThat(result.getPosition(), Is.is(1));
+
     }
 
     @Test public void elementNotInSequenceLength1() {
@@ -32,6 +34,7 @@ public class BinarySearchTest {
         SearchResult result = BinarySearch.search(element, sequence);
 
         assertThat(result.isFound(), Is.is(false));
+        assertThat(result.getPosition(), Is.is(-1));
 
     }
 
@@ -42,6 +45,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
+        assertThat(result.isFound(), Is.is(true));
         assertThat(result.getPosition(), Is.is(1));
 
     }
@@ -53,6 +57,7 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
+        assertThat(result.isFound(), Is.is(true));
         assertThat(result.getPosition(), Is.is(3));
 
     }
@@ -64,18 +69,20 @@ public class BinarySearchTest {
 
         SearchResult result = BinarySearch.search(element, sequence);
 
+        assertThat(result.isFound(), Is.is(true));
         assertThat(result.getPosition(), Is.is(2));
 
     }
 
     @Test public void elementNotInSequence() {
 
-        int[] sequence = {1};
+        int[] sequence = {1, 2, 3};
         int element = 4;
 
         SearchResult result = BinarySearch.search(element, sequence);
 
         assertThat(result.isFound(), Is.is(false));
+        assertThat(result.getPosition(), Is.is(-1));
 
     }
 
